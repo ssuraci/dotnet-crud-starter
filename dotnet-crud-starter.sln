@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-crud-demo", "dotnet-crud-demo\dotnet-crud-demo.csproj", "{A604E0CF-F8AE-4883-883F-983D18436182}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-crudlib", "dotnet-crudlib\dotnet-crudlib.csproj", "{AD994589-D921-4ABF-90AB-C52C1C82F11E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A604E0CF-F8AE-4883-883F-983D18436182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A604E0CF-F8AE-4883-883F-983D18436182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A604E0CF-F8AE-4883-883F-983D18436182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A604E0CF-F8AE-4883-883F-983D18436182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD994589-D921-4ABF-90AB-C52C1C82F11E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD994589-D921-4ABF-90AB-C52C1C82F11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD994589-D921-4ABF-90AB-C52C1C82F11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD994589-D921-4ABF-90AB-C52C1C82F11E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
