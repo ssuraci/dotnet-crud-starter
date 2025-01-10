@@ -1,13 +1,13 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using NetCrudLib.Controller;
-using NetCrudLib.Demo.Dto;
-using NetCrudLib.Demo.Entities;
-using NetCrudLib.Demo.Service;
-using NetCrudLib.Demo.Validator;
-using NetCrudLib.Service;
+using NetCrudStarter.Controller;
+using NetCrudStarter.Demo.Dto;
+using NetCrudStarter.Demo.Entities;
+using NetCrudStarter.Demo.Service;
+using NetCrudStarter.Demo.Validator;
+using NetCrudStarter.Service;
 
-namespace NetCrudLib.Demo.Controllers;
+namespace NetCrudStarter.Demo.Controllers;
 
 
 [Route("api/[controller]")]

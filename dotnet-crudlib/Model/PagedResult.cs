@@ -1,4 +1,4 @@
-namespace NetCrudLib.Model
+namespace NetCrudStarter.Model
 {
 
     public class PagedResult<T>

@@ -1,10 +1,10 @@
-using NetCrudLib.Demo.Entities;
-using NetCrudLib.Demo.Repo;
-using NetCrudLib.Middleware;
-using NetCrudLib.Repository;
-using NetCrudLib.Service;
+using NetCrudStarter.Demo.Entities;
+using NetCrudStarter.Demo.Repo;
+using NetCrudStarter.Middleware;
+using NetCrudStarter.Repository;
+using NetCrudStarter.Service;
 
-namespace NetCrudLib.Demo.Service;
+namespace NetCrudStarter.Demo.Service;
 
 public class TeacherService: BaseService<Teacher, int>
 {

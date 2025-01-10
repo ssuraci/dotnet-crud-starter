@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using NetCrudLib.Model;
+using NetCrudStarter.Model;
 
-namespace NetCrudLib.Demo.Entities;
+namespace NetCrudStarter.Demo.Entities;
 
 public partial class School  : BaseEntity<int>
 {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using NetCrudLib.Demo.Entities;
+using NetCrudStarter.Demo.Entities;
 
-namespace NetCrudLib.Demo.Context;
+namespace NetCrudStarter.Demo.Context;
 
 public partial class DemoDbContext : DbContext
 {

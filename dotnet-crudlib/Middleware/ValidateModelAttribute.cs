@@ -8,7 +8,7 @@ using WebapiTemplate.Dto;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Http;
 
-namespace NetCrudLib.Filter;
+namespace NetCrudStarter.Filter;
 
 public class ValidationFailedResult : ObjectResult
 {

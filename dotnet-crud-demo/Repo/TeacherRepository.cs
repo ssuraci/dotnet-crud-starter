@@ -1,11 +1,11 @@
 using System.Linq.Expressions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NetCrudLib.Demo.Entities;
-using NetCrudLib.Model;
-using NetCrudLib.Repository;
+using NetCrudStarter.Demo.Entities;
+using NetCrudStarter.Model;
+using NetCrudStarter.Repository;
 
-namespace NetCrudLib.Demo.Repo;
+namespace NetCrudStarter.Demo.Repo;
 
 public class TeacherRepository: BaseRepository<Teacher, int>
 {

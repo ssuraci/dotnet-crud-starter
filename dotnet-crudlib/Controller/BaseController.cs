@@ -1,19 +1,19 @@
 ﻿using System.Security;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using NetCrudLib.Model;
-using NetCrudLib.Dto;
+using NetCrudStarter.Model;
+using NetCrudStarter.Dto;
 using FluentValidation;
 using FluentValidation.Results;
 using System.Security.Claims;
-using NetCrudLib.Filter;
+using NetCrudStarter.Filter;
 using Newtonsoft.Json.Linq;
 
-namespace NetCrudLib.Controller;
+namespace NetCrudStarter.Controller;
 
 //    [ApiController]
 
-// [Authorize(Roles = "NetCrudLib")]
+// [Authorize(Roles = "NetCrudStarter")]
 public abstract class BaseController<T, TD, TV, TK> : BaseReadOnlyController<T, TD, TK>
     where T : BaseEntity<TK> where TD : BaseDto<TK> where TV : AbstractValidator<TD>
 {

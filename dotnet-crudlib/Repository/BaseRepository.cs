@@ -1,9 +1,9 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using NetCrudLib.Model;
+using NetCrudStarter.Model;
 using System.Transactions;
 
-namespace NetCrudLib.Repository
+namespace NetCrudStarter.Repository
 {
     public class BaseRepository<T, TK>(ILogger<BaseRepository<T, TK>> logger, DbContext dbContext)
         : BaseReadOnlyRepository<T, TK>(logger, dbContext) where T : BaseEntity<TK>

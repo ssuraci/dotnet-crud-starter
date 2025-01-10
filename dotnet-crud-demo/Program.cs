@@ -1,13 +1,13 @@
 using AutoMapper;
 using Castle.DynamicProxy;
 using Microsoft.EntityFrameworkCore;
-using NetCrudLib.Demo.Context;
-using NetCrudLib.Demo.Mapper;
-using NetCrudLib.Demo.Repo;
-using NetCrudLib.Demo.Service;
-using NetCrudLib.Demo.Validator;
+using NetCrudStarter.Demo.Context;
+using NetCrudStarter.Demo.Mapper;
+using NetCrudStarter.Demo.Repo;
+using NetCrudStarter.Demo.Service;
+using NetCrudStarter.Demo.Validator;
 
-using NetCrudLib.Middleware;
+using NetCrudStarter.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 

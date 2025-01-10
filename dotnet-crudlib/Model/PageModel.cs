@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-namespace NetCrudLib.Model
+namespace NetCrudStarter.Model
 {
     public enum OrderDir
     {

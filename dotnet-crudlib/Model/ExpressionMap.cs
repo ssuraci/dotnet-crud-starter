@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace NetCrudLib.Model
+namespace NetCrudStarter.Model
 {
 
     public class ExpressionMap<T, TK> where T : BaseEntity<TK>

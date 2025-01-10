@@ -1,7 +1,7 @@
-using NetCrudLib.Demo.Dto;
-using NetCrudLib.Demo.Entities;
+using NetCrudStarter.Demo.Dto;
+using NetCrudStarter.Demo.Entities;
 
-namespace NetCrudLib.Demo.Mapper;
+namespace NetCrudStarter.Demo.Mapper;
 
 public class TeacherMapper: AutoMapper.Profile
 {

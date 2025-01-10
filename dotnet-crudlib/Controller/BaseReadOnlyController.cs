@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using Microsoft.Extensions.Logging;
-using NetCrudLib.Dto;
-using NetCrudLib.Model;
-using NetCrudLib.Service;
+using NetCrudStarter.Dto;
+using NetCrudStarter.Model;
+using NetCrudStarter.Service;
 using WebapiTemplate.Dto;
 
-namespace NetCrudLib.Controller;
+namespace NetCrudStarter.Controller;
 
 //    [ApiController]
 

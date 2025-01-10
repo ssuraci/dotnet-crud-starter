@@ -1,7 +1,7 @@
 using FluentValidation;
-using NetCrudLib.Demo.Dto;
+using NetCrudStarter.Demo.Dto;
 
-namespace NetCrudLib.Demo.Validator;
+namespace NetCrudStarter.Demo.Validator;
 
 public class TeacherValidator: AbstractValidator<TeacherDto>
 {

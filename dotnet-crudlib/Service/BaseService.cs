@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using NetCrudLib.Model;
-using NetCrudLib.Repository;
+using NetCrudStarter.Model;
+using NetCrudStarter.Repository;
 using Microsoft.EntityFrameworkCore.Storage;
-using NetCrudLib.Middleware;
+using NetCrudStarter.Middleware;
 
-namespace NetCrudLib.Service
+namespace NetCrudStarter.Service
 {
     public abstract class BaseService<T, TK>(ILogger<BaseService<T, TK>> logger, BaseRepository<T, TK> repository): BaseReadOnlyService<T, TK>(logger, repository) where T : BaseEntity<TK>
     {

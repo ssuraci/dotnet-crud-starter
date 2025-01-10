@@ -1,6 +1,6 @@
-using NetCrudLib.Dto;
+using NetCrudStarter.Dto;
 
-namespace NetCrudLib.Demo.Dto;
+namespace NetCrudStarter.Demo.Dto;
 
 public class TeacherDto: BaseDto<int>
 {

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Castle.DynamicProxy;
 
-namespace NetCrudLib.Middleware;
+namespace NetCrudStarter.Middleware;
 
 
 public class TransactionInterceptor : IInterceptor
