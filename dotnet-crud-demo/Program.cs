@@ -9,6 +9,7 @@ using NetCrudStarter.Demo.Validator;
 
 using NetCrudStarter.Middleware;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 var proxyGenerator = new ProxyGenerator();
@@ -32,6 +33,7 @@ builder.Services.AddScoped<TeacherService>(provider =>
         new object[] {logger, teacherRepo}, 
         new TransactionInterceptor(dbContext, provider.GetRequiredService<ILogger<TransactionInterceptor>>()));
 });
+
 builder.Services.AddScoped<TeacherMapper>();
 builder.Services.AddScoped<TeacherValidator>();
 var mapperConfig = new MapperConfiguration(cfg =>
@@ -62,3 +64,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { } 

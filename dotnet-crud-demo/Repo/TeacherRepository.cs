@@ -2,6 +2,7 @@ using System.Linq.Expressions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NetCrudStarter.Demo.Entities;
+using NetCrudStarter.Demo.Entities.filters;
 using NetCrudStarter.Model;
 using NetCrudStarter.Repository;
 
@@ -28,14 +29,18 @@ public class TeacherRepository: BaseRepository<Teacher, int>
     {
         foreach (KeyValuePair<string, string> entry in pageModel.FilterDict)
         {
-            switch (entry.Key)
+            if (Enum.TryParse(entry.Key, out TeacherFilter filter))
             {
-                case "nameLike":
-                    dbQuery = dbQuery.Where(x => x.LastName!.StartsWith(entry.Value));
-                    break;
-                case "idEq":
-                    dbQuery = dbQuery.Where(x => x.Id.Equals(entry.Value));
-                    break;
+                switch (filter)
+                {
+                    case TeacherFilter.StrLastNameLike:
+                        dbQuery = dbQuery.Where(x => x.LastName!.StartsWith(entry.Value));
+                        break;
+                    case TeacherFilter.SchoolIdEq:
+                        dbQuery = dbQuery.Where(x => x.School != null && x.School.Id.Equals(entry.Value));
+                        break;
+                }
+                
             }
         }
         return dbQuery.OrderBy(x => x.LastName);

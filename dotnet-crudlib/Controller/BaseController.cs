@@ -14,8 +14,11 @@ namespace NetCrudStarter.Controller;
 //    [ApiController]
 
 // [Authorize(Roles = "NetCrudStarter")]
-public abstract class BaseController<T, TD, TV, TK> : BaseReadOnlyController<T, TD, TK>
-    where T : BaseEntity<TK> where TD : BaseDto<TK> where TV : AbstractValidator<TD>
+public abstract class BaseController<T, TD, TV, TK, TE> : BaseReadOnlyController<T, TD, TK, TE>
+    where T : BaseEntity<TK> 
+    where TD : BaseDto<TK> 
+    where TV : AbstractValidator<TD>
+    where TE: Enum
 {
     protected readonly TV validator;
 

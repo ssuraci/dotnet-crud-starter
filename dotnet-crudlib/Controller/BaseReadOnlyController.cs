@@ -13,7 +13,10 @@ namespace NetCrudStarter.Controller;
 //    [ApiController]
 
 // [Authorize(Roles = "WebapiTemplate")]
-public abstract class BaseReadOnlyController<T, TD, TK> : ControllerBase where T : BaseEntity<TK> where TD : BaseDto<TK>
+public abstract class BaseReadOnlyController<T, TD, TK, TE> : ControllerBase 
+    where T : BaseEntity<TK> 
+    where TD : BaseDto<TK>
+    where TE: Enum
 {
     protected readonly ILogger Logger;
 
@@ -64,6 +67,19 @@ public abstract class BaseReadOnlyController<T, TD, TK> : ControllerBase where T
         int count = 0; // non calcola count(*)    
         BeforeGet(pageModel);
         IList<DropdownDto> list = Mapper.Map<IList<DropdownDto>>(GetBaseService().GetByPageModel(pageModel));
+        return list;
+    }
+    
+    [HttpGet("filters")]
+    public virtual IList<DropdownDto> GetFilters()
+    {
+        IList<DropdownDto> list = new List<DropdownDto>();
+        foreach (var value in Enum.GetValues(typeof(TE)))
+        {
+            var description = value.ToString();
+            list.Add(new DropdownDto(description, description));
+        }
+
         return list;
     }
 }
