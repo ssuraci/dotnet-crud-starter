@@ -12,37 +12,37 @@ namespace NetCrudStarter.Service
     {
         protected new readonly  BaseRepository<T, TK> Repository = repository;
         
-        [Transactional]
+        [TransactionAspect]
         public virtual async Task<T> Add(T entity)
         {
             return await Repository.Add(entity);
         }
 
-        [Transactional]
+        [TransactionAspect]
         public virtual async Task Save(List<T> entityList)
         {
            await Repository.Save(entityList);
         }
 
-        [Transactional]
+        [TransactionAspect]
         public virtual async Task<T> Update(T entity)
         {
             return await Repository.Update(entity);
         }
         
-        [Transactional]
+        [TransactionAspect]
         public virtual async Task Remove(T entity)
         {
             await Repository.Remove(entity);
         }
 
-        [Transactional]
+        [TransactionAspect]
         public virtual async Task RemoveById(TK id)
         {
             await Repository.RemoveById(id);
         }
         
-        [Transactional]
+        [TransactionAspect]
         public virtual async Task Remove(List<T> itemList)
         {
             await Repository.Remove(itemList);

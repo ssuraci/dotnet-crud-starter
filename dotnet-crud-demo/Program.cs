@@ -22,17 +22,20 @@ builder.Services.AddDbContext<DemoDbContext>(options =>
 
 builder.Services.AddDbContext<DbContext, DemoDbContext>();
 builder.Services.AddScoped<TeacherRepository>();
+builder.Services.AddScoped<TeacherService>();
+/*
 builder.Services.AddScoped<TeacherService>(provider =>
 {
     var logger = provider.GetRequiredService<ILogger<TeacherService>>();
     var dbContext = provider.GetRequiredService<DemoDbContext>();
     var teacherRepo = provider.GetRequiredService<TeacherRepository>();
     var service = new TeacherService(logger, teacherRepo);
-    return (TeacherService) proxyGenerator.CreateClassProxy(typeof(TeacherService), 
-        ProxyGenerationOptions.Default, 
-        new object[] {logger, teacherRepo}, 
+    return (TeacherService) proxyGenerator.CreateClassProxy(typeof(TeacherService),
+        ProxyGenerationOptions.Default,
+        new object[] {logger, teacherRepo},
         new TransactionInterceptor(dbContext, provider.GetRequiredService<ILogger<TransactionInterceptor>>()));
 });
+*/
 
 builder.Services.AddScoped<TeacherMapper>();
 builder.Services.AddScoped<TeacherValidator>();
@@ -49,6 +52,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+ServiceLocator.Provider = app.Services;
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

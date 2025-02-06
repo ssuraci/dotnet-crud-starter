@@ -3,7 +3,7 @@ using Castle.DynamicProxy;
 
 namespace NetCrudStarter.Middleware;
 
-
+// https://github.com/postsharp/Metalama.Samples/blob/bd84f8ea0a8ba37e9bc0217549b42acece40ff78/examples/exception-handling/retry/retry-5/RetryAttribute.cs
 public class TransactionInterceptor : IInterceptor
 {
     private readonly DbContext _dbContext;
