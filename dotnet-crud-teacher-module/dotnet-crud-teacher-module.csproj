@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>NetCrudStarter.TeacherModule</RootNamespace>
+    <PackageId>dotnet-crud-teacher-module</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dotnet-crud-shared\dotnet-crud-shared.csproj" />
+    <ProjectReference Include="..\dotnet-crudlib\dotnet-crudlib.csproj" />
+  </ItemGroup>
+
+</Project>
